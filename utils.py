@@ -10,7 +10,8 @@ class Subject:
         elective=[],
         core=[],
         prof_skills=False,
-        further_discipline=False
+        further_discipline=False,
+        prereqs=[]
     ):
         self.name = name
         self.code = code
@@ -20,6 +21,7 @@ class Subject:
         self.core = core
         self.prof_skill = prof_skills
         self.further_discipline = further_discipline
+        self.prereqs = prereqs
 
     def __str__(self):
         return self.name
@@ -61,3 +63,10 @@ def print_schedule(model, display_weight=False):
             suffix = f", weight = {subject.obj}" if display_weight else ""
             print(f"{subject.varName.split(" - ")[0]}{suffix}")
         print()
+
+def get_name_by_code(subjects, code):
+    for subject in subjects:
+        if subject.code == code:
+            return subject.name
+    
+    return None

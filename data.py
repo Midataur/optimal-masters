@@ -25,6 +25,7 @@ specialisations = [
 
 # Semester 1 is Sem 1 in an even year
 # This comes from the masters guide at time of writing
+# Most prerequisites are not implemented, so double check yourself
 subjects = [
     Subject(
         "Advanced Methods: Transforms",
@@ -43,7 +44,7 @@ subjects = [
     Subject(
         "Random Matrix Theory",
         code="MAST90103",
-        weight=2,
+        weight=3,
         semesters=[1],
         elective=["app", "mp"]
     ),
@@ -263,10 +264,9 @@ subjects = [
         "Random Processes",
         weight=2,
         code="MAST90019",
-        #semesters=[1, 3],
-        # TODO: FIX THIS HACK BY IMPLEMENTING ACTUAL PREREQS
-        semesters=[1],
-        elective=["stat"]
+        semesters=[1, 3],
+        elective=["stat"],
+        prereqs=["MAST90081"]
     ),
     Subject(
         "Statistical Modelling",

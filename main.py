@@ -1,7 +1,7 @@
 from collections import defaultdict as dd
 from gurobipy import GRB
 from random import random
-from utils import print_schedule
+from utils import print_schedule, get_name_by_code
 import gurobipy as gp
 import data
 
@@ -27,6 +27,8 @@ if demo:
     for subject in data.subjects:
         if subject.weight == 0:
             subject.set_weight(random()*10)
+
+prereqs = []
 
 # Create subject variables
 for subject in data.subjects:
@@ -59,6 +61,16 @@ for subject in data.subjects:
         # sort into further discipline
         if subject.further_discipline:
             further.append(var)
+
+        # deal with future prereqs
+        for code in subject.prereqs:
+            prereq_name = get_name_by_code(data.subjects, code)
+
+            prereqs.append({
+                "subject": var,
+                "subject_sem": effective_sem,
+                "requires": prereq_name
+            })
 
     if len(subject.semesters) > 1:
         # Add "only take the subject once" constraint
@@ -108,6 +120,22 @@ model.addConstr(gp.quicksum(prof_skills) >= 1)
 
 # Add further discipline constraint
 model.addConstr(gp.quicksum(further) <= 2)
+
+# Add prerequisite constraints
+for constraint in prereqs:
+    possible = []
+
+    for sem in range(constraint["subject_sem"]):
+        required = model.getVarByName(
+            f"{constraint["requires"]} - Semester {sem}"
+        )
+
+        # subject actually exists in this sem
+        if required:
+            possible.append(required)
+    
+    # add constraint
+    model.addConstr(gp.quicksum(possible) >= constraint["subject"])
 
 # Optimize model
 model.optimize()
