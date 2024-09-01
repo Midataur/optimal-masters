@@ -13,4 +13,4 @@ The unimelb maths masters has a lot of different options. I was having trouble d
 
 Notes:
 
-Prerequisites are not implemented yet, so I did a janky hack to make sure Random Processes comes after Advanced Probability. Keep this in mind if you are not starting in 2025 sem 1.
+Most prerequisites are not implemented yet, so some generated plans may technically be invalid. Tell me if this happens and I'll fix it.
