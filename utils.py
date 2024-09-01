@@ -53,7 +53,7 @@ def print_schedule(model, display_weight=False):
                 semesters[sem].append(var)
             else:
                 # specialisation
-                print(f"Specialisation: {var.varName}")
+                print(f"\nSpecialisation: {var.varName}\n")
 
     for semester, subjects in sorted(semesters.items(), key=lambda x: x[0]):
         print(f"Semester {semester+1}:")

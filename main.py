@@ -40,9 +40,6 @@ for subject in data.subjects:
             name=f"{subject} - Semester {effective_sem}"
         )
 
-        if subject.weight != 0:
-            print(subject)
-
         sub_vars.append(var)
 
         # sort into semester

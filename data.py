@@ -63,7 +63,7 @@ subjects = [
     ),
     Subject(
         "Mathematical Biology",
-        weight=1,
+        weight=2,
         code="MAST90011",
         semesters=[2],
         elective=["app"]
@@ -112,7 +112,7 @@ subjects = [
     ),
     Subject(
         "Lie Algebras",
-        weight=1,
+        weight=2,
         code="MAST90132",
         semesters=[3],
         elective=["mp", "pure"]
@@ -213,7 +213,7 @@ subjects = [
     ),
     Subject(
         "Differential Geometry",
-        weight=1,
+        weight=2,
         code="MAST90143",
         semesters=[2],
         elective=["pure"]
@@ -240,7 +240,7 @@ subjects = [
     ),
     Subject(
         "Riemann Surfaces & Complex Analysis",
-        weight=1,
+        weight=2,
         code="MAST90056",
         semesters=[4],
         elective=["pure"]
@@ -289,7 +289,7 @@ subjects = [
     ),
     Subject(
         "Advanced Probability",
-        weight=2,
+        weight=3,
         code="MAST90081",
         semesters=[2, 4],
         core=["stat"]
