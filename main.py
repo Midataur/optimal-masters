@@ -1,6 +1,6 @@
 from collections import defaultdict as dd
 from gurobipy import GRB
-from random import random
+from random import random, seed
 from utils import print_schedule, get_name_by_code
 import gurobipy as gp
 import data
@@ -17,6 +17,8 @@ first_sem = 3
 load = [4, 3, 3, 2]
 demo = False
 
+noise = True
+
 semesters = dd(list)
 specs = dd(lambda: {"core": [], "elective": []})
 prof_skills = []
@@ -27,6 +29,16 @@ if demo:
     for subject in data.subjects:
         if subject.weight == 0:
             subject.set_weight(random()*10)
+
+# sometimes there can be more than one optimal solution
+# and a change in an irrelevant weight can lead to a different plan
+# noise helps prevent this
+seed(42)
+if noise:
+    for subject in data.subjects:
+        subject.set_weight(
+            subject.weight + (random()-0.5)/10000
+        )
 
 prereqs = []
 
@@ -140,5 +152,6 @@ for constraint in prereqs:
 # Optimize model
 model.optimize()
 
+# Print results
 print()
 print_schedule(model, display_weight=False)

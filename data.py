@@ -44,7 +44,7 @@ subjects = [
     Subject(
         "Random Matrix Theory",
         code="MAST90103",
-        weight=3,
+        weight=2.1,
         semesters=[1],
         elective=["app", "mp"]
     ),
@@ -57,7 +57,7 @@ subjects = [
     ),
     Subject(
         "Bayesian Statistical Learning",
-        weight=2,
+        weight=2.1,
         code="MAST90125",
         semesters=[2, 4],
         elective=["app", "stat"]
@@ -71,7 +71,7 @@ subjects = [
     ),
     Subject(
         "Advanced Methods: Differential Equations",
-        weight=1.5,
+        weight=1,
         code="MAST90064",
         semesters=[3],
         core=["app"],
@@ -79,7 +79,7 @@ subjects = [
     ),
     Subject(
         "Mathematical Statistical Mechanics",
-        weight=2,
+        weight=3,
         code="MAST90060",
         semesters=[3],
         core=["mp"],
@@ -113,7 +113,7 @@ subjects = [
     ),
     Subject(
         "Lie Algebras",
-        weight=2,
+        weight=2.1,
         code="MAST90132",
         semesters=[3],
         elective=["mp", "pure"]
@@ -145,7 +145,7 @@ subjects = [
     ),
     Subject(
         "Stochastic Optimisation",
-        weight=3,
+        weight=4,
         code="MAST90144",
         semesters=[1],
         elective=["opp"]
@@ -182,7 +182,7 @@ subjects = [
     ),
     Subject(
         "Algebraic Topology",
-        weight=2,
+        weight=1,
         code="MAST90023",
         semesters=[1],
         core=["pure"]
@@ -358,7 +358,7 @@ subjects = [
     ),
     Subject(
         "Scientific Communication",
-        weight=2,
+        weight=1.5,
         code="SCIE90012",
         semesters=[2, 4],
         prof_skills=True
