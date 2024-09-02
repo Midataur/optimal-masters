@@ -126,7 +126,7 @@ subjects = [
     ),
     Subject(
         "Exactly Solveable Models",
-        weight=2,
+        weight=3,
         code="MAST90065",
         semesters=[4],
         elective=["mp"]
@@ -262,7 +262,7 @@ subjects = [
     ),
     Subject(
         "Random Processes",
-        weight=2,
+        weight=3,
         code="MAST90019",
         semesters=[1, 3],
         elective=["stat"],
@@ -365,7 +365,7 @@ subjects = [
     ),
     Subject(
         "Communication for Research Scientists",
-        weight=1,
+        weight=3,
         code="SCIE90013",
         semesters=[1, 2, 3, 4],
         prof_skills=True

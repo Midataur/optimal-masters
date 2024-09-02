@@ -59,7 +59,7 @@ def print_schedule(model, display_weight=False):
 
     for semester, subjects in sorted(semesters.items(), key=lambda x: x[0]):
         print(f"Semester {semester+1}:")
-        for subject in subjects:
+        for subject in sorted(subjects, key=lambda x: x.varName):
             suffix = f", weight = {subject.obj}" if display_weight else ""
             print(f"{subject.varName.split(" - ")[0]}{suffix}")
         print()
