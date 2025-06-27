@@ -57,7 +57,7 @@ subjects = [
     ),
     Subject(
         "Bayesian Statistical Learning",
-        weight=2.1,
+        weight=4,
         code="MAST90125",
         semesters=[2, 4],
         elective=["app", "stat"]
@@ -79,7 +79,7 @@ subjects = [
     ),
     Subject(
         "Mathematical Statistical Mechanics",
-        weight=3,
+        weight=9999,#4,
         code="MAST90060",
         semesters=[3],
         core=["mp"],
@@ -126,7 +126,7 @@ subjects = [
     ),
     Subject(
         "Exactly Solveable Models",
-        weight=3,
+        weight=2.5,
         code="MAST90065",
         semesters=[4],
         elective=["mp"]
@@ -182,14 +182,14 @@ subjects = [
     ),
     Subject(
         "Algebraic Topology",
-        weight=1,
+        weight=2.9,
         code="MAST90023",
         semesters=[1],
         core=["pure"]
     ),
     Subject(
         "Functional Analysis",
-        weight=1,
+        weight=3.1,
         code="MAST90020",
         semesters=[1],
         elective=["pure"]
@@ -214,20 +214,21 @@ subjects = [
     ),
     Subject(
         "Differential Geometry",
-        weight=2,
+        weight=3.1,
         code="MAST90143",
         semesters=[2],
         elective=["pure"]
     ),
     Subject(
         "Measure Theory",
-        weight=3,
+        weight=9999,#4,
         code="MAST90012",
         semesters=[3],
         core=["pure"]
     ),
     Subject(
         "Differential Topology",
+        weight=2.7,
         code="MAST90029",
         semesters=[3],
         elective=["pure"]
@@ -241,7 +242,7 @@ subjects = [
     ),
     Subject(
         "Riemann Surfaces & Complex Analysis",
-        weight=2,
+        weight=3.2,
         code="MAST90056",
         semesters=[4],
         elective=["pure"]
@@ -255,14 +256,14 @@ subjects = [
     ),
     Subject(
         "Mathematical Statistics",
-        weight=1,
+        weight=9999,#4,
         code="MAST90082",
-        semesters=[1, 3],
+        semesters=[3],#[1, 3],
         core=["stat"]
     ),
     Subject(
         "Random Processes",
-        weight=3,
+        weight=1.5,
         code="MAST90019",
         semesters=[1, 3],
         elective=["stat"],
@@ -289,7 +290,7 @@ subjects = [
     ),
     Subject(
         "Advanced Probability",
-        weight=3,
+        weight=2,
         code="MAST90081",
         semesters=[2, 4],
         core=["stat"]
@@ -326,12 +327,12 @@ subjects = [
     ),
     Subject(
         "Stochastic Calculus with Applications",
-        weight=2,
+        weight=9999,#3.5,
         code="MAST90059",
         semesters=[3],
         elective=["stat"]
     ),
-    # Can't tell if this is available anymore
+    # Can't tell if this is even available anymore
     Subject(
         "Experimental Mathematics",
         code="MAST90053",
@@ -339,6 +340,7 @@ subjects = [
     ),
     Subject(
         "The Art of Scientific Computation",
+        weight=3,
         code="COMP90072",
         semesters=[1, 2, 3, 4],
         prof_skills=True
@@ -365,7 +367,7 @@ subjects = [
     ),
     Subject(
         "Communication for Research Scientists",
-        weight=3,
+        weight=-1,
         code="SCIE90013",
         semesters=[1, 2, 3, 4],
         prof_skills=True

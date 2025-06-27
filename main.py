@@ -17,7 +17,7 @@ first_sem = 3
 load = [4, 3, 3, 2]
 demo = False
 
-noise = True
+noise = False
 
 semesters = dd(list)
 specs = dd(lambda: {"core": [], "elective": []})
